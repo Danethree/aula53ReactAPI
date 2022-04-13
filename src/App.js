@@ -27,7 +27,7 @@ function App() {
          React Nutri
        </strong>
      </header>
-    <div>
+   
     {nutri.map((item)=>{
        <article key = {item.id} className="post">
          <storng className="titulo">{item.titulo}</storng>
@@ -38,7 +38,7 @@ function App() {
          <a className="botao">Acessar</a>
        </article>
      })}
-    </div>
+    
     
    </div>
   );
