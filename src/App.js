@@ -13,7 +13,7 @@ function App() {
       fetch(url)
       .then((response) => response.json())
       .then((json)=>{
-        console.log(json);
+        console.log(`JSOn ===>`,json);
         setNutri(json)
       })
     }
@@ -28,17 +28,23 @@ function App() {
        </strong>
      </header>
    
-    {nutri.map((item)=>{
-       <article key = {item.id} className="post">
-         <storng className="titulo">{item.titulo}</storng>
-         <img src = {item.capa} alt = {item.titulo} className="capa"></img>
-         <p className="subtitulo">
-           {item.subtitulo}
-         </p>
-         <a className="botao">Acessar</a>
-       </article>
-     })}
-    
+
+
+      {console.log(`Var Nutri ===>`,nutri)}
+        {nutri.map((item)=>{
+          return(
+              <article key = {item.id} className="post">
+          <storng className="titulo">{item.titulo}</storng>
+          <img src = {item.capa} alt = {item.titulo} className="capa"></img>
+          <p className="subtitulo">
+            {item.subtitulo}
+          </p>
+          <a href = "#" className="botao">Acessar</a>
+        </article>
+          )
+      })}
+   
+  
     
    </div>
   );
