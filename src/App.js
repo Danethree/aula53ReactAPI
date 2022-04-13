@@ -6,7 +6,7 @@ import './style.css';
 function App() {
 
   const[nutri,setNutri] = useState([]);
-  let url = 'https://sujeitoprogramador.com/rn-api/?api=posts'
+  
   useEffect(() =>{
      function loadApi(){
       let url = 'https://sujeitoprogramador.com/rn-api/?api=posts'
